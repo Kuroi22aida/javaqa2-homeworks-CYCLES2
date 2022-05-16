@@ -54,7 +54,7 @@ public class StatsServiceTest {
     public void shouldNumberMonthsAboveAverageSales() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int actual = service.numberMonthsBelowAverageSales(sales);
+        int actual = service.numberMonthsAboveAverageSales(sales);
         int expected = 5;
         Assertions.assertEquals(expected, actual);
     }

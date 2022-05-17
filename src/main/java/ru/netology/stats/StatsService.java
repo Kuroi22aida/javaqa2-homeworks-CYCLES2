@@ -45,23 +45,26 @@ public class StatsService {
     public int numberMonthsBelowAverageSales(int[] sales) {
 
         int count = 0;
+        int averageSum = sumSales(sales) / 12;
         for (int sale : sales) {
-            if (sale < averageAmountSales(sales))
+            if (sale < averageSum) {
                 count++;
+            }
         }
         return count;
-
     }
 
     public int numberMonthsAboveAverageSales(int[] sales) {
 
         int count = 0;
+        int averageSum = sumSales(sales) / 12;
         for (int sale : sales) {
-            if (sale > averageAmountSales(sales))
+            if (sale > averageSum) {
                 count++;
+            }
+
         }
         return count;
-
     }
 
 }
